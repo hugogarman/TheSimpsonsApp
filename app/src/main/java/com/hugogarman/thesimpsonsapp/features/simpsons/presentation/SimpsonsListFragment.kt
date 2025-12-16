@@ -1,17 +1,18 @@
 package com.hugogarman.thesimpsonsapp.features.simpsons.presentation
 
+import SimpsonsListAdapter
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.hugogarman.thesimpsonsapp.R
 import com.hugogarman.thesimpsonsapp.core.presentation.ext.hide
 import com.hugogarman.thesimpsonsapp.core.presentation.ext.visible
 import com.hugogarman.thesimpsonsapp.databinding.FragmentSimpsonsListBinding
 import com.hugogarman.thesimpsonsapp.features.simpsons.domain.Simpson
-import com.hugogarman.thesimpsonsapp.features.simpsons.presentation.adapter.SimpsonsListAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SimpsonsListFragment : Fragment() {
@@ -41,6 +42,13 @@ class SimpsonsListFragment : Fragment() {
     private fun setupRecyclerView() {
         binding.rvSimpsons.layoutManager = LinearLayoutManager(requireContext())
         binding.rvSimpsons.adapter = adapter
+
+        adapter.setEvent { simpsonId ->
+            val args = Bundle().apply {
+                putInt("simpsonId", simpsonId)
+            }
+            findNavController().navigate(R.id.simpsonDetailFragment, args)
+        }
     }
 
     private fun observeUiState() {

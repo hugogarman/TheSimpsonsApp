@@ -8,6 +8,21 @@
     <fragment
         android:id="@+id/simpsonsListFragment"
         android:name="com.hugogarman.thesimpsonsapp.features.simpsons.presentation.SimpsonsListFragment"
-        tools:layout="@layout/fragment_simpsons_list" />
+        tools:layout="@layout/fragment_simpsons_list">
+
+        <action
+            android:id="@+id/action_simpsonsListFragment_to_simpsonDetailFragment"
+            app:destination="@id/simpsonDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/simpsonDetailFragment"
+        android:name="com.hugogarman.thesimpsonsapp.features.simpsons.presentation.SimpsonDetailFragment"
+        tools:layout="@layout/fragment_simpsons_detail">
+
+        <argument
+            android:name="simpsonId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

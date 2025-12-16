@@ -1,5 +1,3 @@
-package com.hugogarman.thesimpsonsapp.features.simpsons.presentation.adapter
-
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
@@ -7,15 +5,26 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hugogarman.thesimpsonsapp.core.presentation.ext.loadUrl
 import com.hugogarman.thesimpsonsapp.databinding.ViewItemSimpsonBinding
 import com.hugogarman.thesimpsonsapp.features.simpsons.domain.Simpson
+import com.hugogarman.thesimpsonsapp.features.simpsons.presentation.adapter.SimpsonsDiffUtil
 
 class SimpsonsListAdapter : ListAdapter<Simpson, SimpsonsListAdapter.ViewHolder>(SimpsonsDiffUtil()) {
 
+    private var onSimpsonClick: ((Int) -> Unit)? = null
+
+    fun setEvent(onClick: (Int) -> Unit) {
+        onSimpsonClick = onClick
+    }
+
     class ViewHolder(private val binding: ViewItemSimpsonBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(simpson: Simpson) {
+        fun bind(simpson: Simpson, onSimpsonClick: ((Int) -> Unit)?) {
             binding.apply {
                 ivSimpson.loadUrl(simpson.portraitPath)
                 tvSimpsonName.text = simpson.name
                 tvSimpsonOccupation.text = simpson.occupation
+
+                btChoose.setOnClickListener {
+                    onSimpsonClick?.invoke(simpson.id)
+                }
             }
         }
     }
@@ -26,7 +35,6 @@ class SimpsonsListAdapter : ListAdapter<Simpson, SimpsonsListAdapter.ViewHolder>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(currentList[position])
+        holder.bind(currentList[position], onSimpsonClick)
     }
-
 }

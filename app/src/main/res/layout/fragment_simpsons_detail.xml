@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_large"
+        app:cardCornerRadius="@dimen/card_corner_radius_detail"
+        app:cardElevation="12dp"
+        app:strokeColor="@color/simpsons_blue_dark"
+        app:strokeWidth="2dp"
+        app:cardBackgroundColor="@color/simpsons_blue">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_large">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSimpsonNameDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/simpsons_font"
+                android:textSize="@dimen/font_size_extra_high"
+                android:textColor="@color/simpsons_yellow"
+                android:textAlignment="center"
+                android:shadowColor="@color/black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4"
+                tools:text="Name"/>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivSimpsonDetail"
+                android:layout_width="@dimen/image_size_detail"
+                android:layout_height="@dimen/image_size_detail"
+                app:layout_constraintTop_toBottomOf="@id/tvSimpsonNameDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/spacing_large"
+                tools:src="@tools:sample/avatars"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSimpsonAgeDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ivSimpsonDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:fontFamily="@font/z_font"
+                android:textSize="@dimen/font_size_extra_small"
+                android:gravity="start"
+                android:maxLines="2"
+                android:ellipsize="end"
+                tools:text="Age: age"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSimpsonOccupationDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvSimpsonAgeDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/spacing_text"
+                android:fontFamily="@font/z_font"
+                android:textSize="@dimen/font_size_extra_small"
+                android:gravity="start"
+                tools:text="Occupation: occupation"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvPhrasesLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvSimpsonOccupationDetail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/spacing_text"
+                android:fontFamily="@font/z_font"
+                android:textSize="@dimen/font_size_extra_small"
+                android:gravity="start"
+                android:text="Phrases:"/>
+
+            <ScrollView
+                android:id="@+id/svPhrases"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toBottomOf="@id/tvPhrasesLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:padding="@dimen/spacing_text"
+                android:layout_marginTop="@dimen/spacing_text"
+                android:background="@drawable/white_box_border">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvPhrases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/z_font"
+                    android:textSize="@dimen/font_size_extra_small"
+                    android:gravity="start"
+                    android:lineSpacingExtra="4dp"
+                    tools:text="- Doh!\n- Why you little...!\n- Woo-hoo!"/>
+
+            </ScrollView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/svPhrases"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:backgroundTint="@color/simpsons_yellow"
+                android:text="Back"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/font_size_small"
+                android:fontFamily="@font/z_font"
+                app:rippleColor="@color/simpsons_orange"
+                app:strokeColor="@color/simpsons_yellow_dark"
+                app:strokeWidth="2dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</ScrollView>
