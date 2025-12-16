@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">TheSimpsonsApp</string>
-    <string name="url_api">https://thesimpsonsapi.com/api/characters</string>
+    <string name="url_api">https://thesimpsonsapi.com/api/</string>
 </resources>
