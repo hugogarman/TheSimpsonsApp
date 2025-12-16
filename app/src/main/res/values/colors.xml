@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="simpsons_yellow">#FFD90F</color>
+    <color name="simpsons_blue">#70D1FE</color>
+    <color name="simpsons_pink">#FF69B4</color>
+    <color name="simpsons_green">#90EE90</color>
+    <color name="simpsons_orange">#FF8C00</color>
+    <color name="simpsons_blue_dark">#4AB8E6</color>
+    <color name="simpsons_yellow_dark">#D4A017</color>
+    <color name="dark_gray">#2C2C2C</color>
 </resources>
