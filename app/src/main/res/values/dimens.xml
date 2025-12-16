@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <dimen name="spacing_large">28dp</dimen>
     <dimen name="spacing">16dp</dimen>
     <dimen name="spacing_vertical">16dp</dimen>
     <dimen name="spacing_horizontal">16dp</dimen>
-    <dimen name="spacing_text">8dp</dimen>
+    <dimen name="spacing_text">6dp</dimen>
 
     <dimen name="image_size_s">16dp</dimen>
     <dimen name="image_size_m">32dp</dimen>
@@ -13,7 +14,9 @@
     <dimen name="image_size_xxl">80dp</dimen>
     <dimen name="image_size_xxxl">96dp</dimen>
     <dimen name="image_size_xxxxl">112dp</dimen>
+    <dimen name="image_size_detail">224dp</dimen>
 
+    <dimen name="font_size_extra_extra_small">10sp</dimen>
     <dimen name="font_size_extra_small">12sp</dimen>
     <dimen name="font_size_small">16sp</dimen>
     <dimen name="font_size_medium">20sp</dimen>
@@ -21,6 +24,7 @@
     <dimen name="font_size_extra_high">30sp</dimen>
 
     <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="detail_card_corner_radius">24dp</dimen>
 
     <dimen name="button_corner_radius">12dp</dimen>
     <dimen name="button_stroke_width">2dp</dimen>

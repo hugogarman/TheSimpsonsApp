@@ -37,7 +37,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:backgroundTint="@color/simpsons_yellow"
-            android:text="Elegir"
+            android:text="Choose"
+            android:textSize="@dimen/font_size_extra_small"
             android:textColor="@color/dark_gray"
             android:fontFamily="@font/z_font"
             app:rippleColor="@color/simpsons_orange"
@@ -72,7 +73,7 @@
             android:layout_marginStart="@dimen/spacing"
             android:layout_marginEnd="@dimen/spacing"
             android:fontFamily="@font/z_font"
-            android:textSize="@dimen/font_size_extra_small"
+            android:textSize="@dimen/font_size_extra_extra_small"
             android:maxLines="2"
             android:ellipsize="end"
             tools:text="Occupation"/>
