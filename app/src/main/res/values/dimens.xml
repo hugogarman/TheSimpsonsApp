@@ -7,6 +7,7 @@
     <dimen name="spacing_horizontal">16dp</dimen>
     <dimen name="spacing_text">6dp</dimen>
     <dimen name="spacing_line">2dp</dimen>
+    <dimen name="margin">170dp</dimen>
 
     <dimen name="item_spacing">6dp</dimen>
 
@@ -26,6 +27,8 @@
     <dimen name="font_size_high">24sp</dimen>
     <dimen name="font_size_extra_high">30sp</dimen>
 
+    <dimen name="button_padding_horizontal">48dp</dimen>
+    <dimen name="button_padding_vertical">16dp</dimen>
     <dimen name="button_corner_radius">12dp</dimen>
     <dimen name="button_stroke_width">2dp</dimen>
 
