@@ -44,10 +44,11 @@ class SimpsonsListFragment : Fragment() {
         binding.rvSimpsons.adapter = adapter
 
         adapter.setEvent { simpsonId ->
-            val args = Bundle().apply {
+            val action = R.id.action_simpsonsListFragment_to_simpsonDetailFragment
+            val bundle = Bundle().apply {
                 putInt("simpsonId", simpsonId)
             }
-            findNavController().navigate(R.id.simpsonDetailFragment, args)
+            findNavController().navigate(action, bundle)
         }
     }
 
