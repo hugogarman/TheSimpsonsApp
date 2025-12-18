@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.hugogarman.thesimpsonsapp.features.simpsons.presentation.WelcomeFragment"
+        android:name="com.hugogarman.thesimpsonsapp.features.simpsonsList.presentation.WelcomeFragment"
         tools:layout="@layout/fragment_welcome">
 
         <action
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/simpsonsListFragment"
-        android:name="com.hugogarman.thesimpsonsapp.features.simpsons.presentation.SimpsonsListFragment"
+        android:name="com.hugogarman.thesimpsonsapp.features.simpsonsList.presentation.SimpsonsListFragment"
         tools:layout="@layout/fragment_simpsons_list">
 
         <action
@@ -35,12 +35,27 @@
 
     <fragment
         android:id="@+id/simpsonDetailFragment"
-        android:name="com.hugogarman.thesimpsonsapp.features.simpsons.presentation.SimpsonDetailFragment"
+        android:name="com.hugogarman.thesimpsonsapp.features.simpsonsList.presentation.SimpsonDetailFragment"
         tools:layout="@layout/fragment_simpsons_detail">
 
         <argument
             android:name="simpsonId"
             app:argType="integer" />
     </fragment>
+
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.hugogarman.thesimpsonsapp.features.episodes.presentation.EpisodesFragment"
+        tools:layout="@layout/fragment_episodes" />
+
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.hugogarman.thesimpsonsapp.features.quiz.presentation.QuizFragment"
+        tools:layout="@layout/fragment_quiz" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.hugogarman.thesimpsonsapp.features.settings.presentation.SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
 
 </navigation>

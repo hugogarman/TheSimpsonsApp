@@ -2,7 +2,7 @@ package com.hugogarman.thesimpsonsapp.core
 
 import android.app.Application
 import com.hugogarman.thesimpsonsapp.core.di.appModule
-import com.hugogarman.thesimpsonsapp.features.simpsons.di.simpsonsModule
+import com.hugogarman.thesimpsonsapp.features.simpsonsList.di.simpsonsModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
