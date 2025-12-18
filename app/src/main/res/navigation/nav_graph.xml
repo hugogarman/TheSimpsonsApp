@@ -12,7 +12,11 @@
 
         <action
             android:id="@+id/action_welcomeFragment_to_simpsonsListFragment"
-            app:destination="@id/simpsonsListFragment" />
+            app:destination="@id/simpsonsListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
     </fragment>
 
     <fragment
@@ -22,7 +26,11 @@
 
         <action
             android:id="@+id/action_simpsonsListFragment_to_simpsonDetailFragment"
-            app:destination="@id/simpsonDetailFragment" />
+            app:destination="@id/simpsonDetailFragment"
+            app:enterAnim="@anim/scale_fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/scale_fade_out" />
     </fragment>
 
     <fragment
