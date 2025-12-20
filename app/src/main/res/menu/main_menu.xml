@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/simpsonsListFragment"
+        android:title="Characters"
+        android:icon="@drawable/ic_list"
+        android:enabled="true" />
+
+    <item
+        android:id="@+id/episodesFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_episodes"
+        android:title="Episodes" />
+
+    <item
+        android:id="@+id/quizFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_quiz"
+        android:title="Quiz" />
+
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"
+        android:enabled="true" />
+
+</menu>
